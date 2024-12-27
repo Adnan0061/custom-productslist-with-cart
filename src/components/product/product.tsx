@@ -60,7 +60,7 @@ export default function Product({ product }: { product: Product }) {
               // already in cart
               <div className="w-full bg-green-600 border-2 text-white font-medium py-2 flex justify-center items-center gap-2 rounded-lg text-sm">
                 <button
-                  onClick={() => deleteFromCart(product)}
+                  onClick={() => deleteFromCart(product.id)}
                   className="rounded flex items-center justify-center"
                 >
                   <Trash2Icon className="w-5 h-5 inline-block" />

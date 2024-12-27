@@ -8,7 +8,7 @@ export type CartContextType = {
   cartItems: CartItemType[] | undefined;
   increaseQuantity: (product: Product) => void | undefined;
   decreaseQuantity: (product: Product) => void | undefined;
-  deleteFromCart: (product: Product) => void | undefined;
+  deleteFromCart: (id: number) => void | undefined;
 };
 
 export const CartContext = createContext<CartContextType>({

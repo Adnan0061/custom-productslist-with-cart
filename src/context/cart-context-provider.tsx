@@ -41,10 +41,8 @@ export function CartContextProvider({ children }: { children: ReactNode }) {
       }
     }
   };
-  const deleteFromCart = (product: Product) => {
-    setCartItems((prevItems) =>
-      prevItems.filter((item) => item.id !== product.id)
-    );
+  const deleteFromCart = (id: number) => {
+    setCartItems((prevItems) => prevItems.filter((item) => item.id !== id));
   };
 
   return (
