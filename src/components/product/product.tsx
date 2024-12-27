@@ -50,7 +50,7 @@ export default function Product({ product }: { product: Product }) {
             cartItems.length > 0 &&
             cartItems.some((item) => item.id === product.id) ? (
               // already in cart
-              <div className="w-full bg-green-600 border-2 text-white font-medium  py-2 flex justify-center items-center gap-2 rounded-lg text-sm">
+              <div className="w-full bg-green-600 border-2 text-white font-medium py-2 flex justify-center items-center gap-2 rounded-lg text-sm">
                 <button
                   onClick={() => deleteFromCart(product)}
                   className="rounded flex items-center justify-center"
@@ -59,11 +59,11 @@ export default function Product({ product }: { product: Product }) {
                 </button>
                 <button
                   onClick={() => decreaseQuantity(product)}
-                  className={`rounded ${
+                  className={`rounded text-2xl flex items-center justify-center ${
                     productQuantity(product.id) === 1 ? "hidden" : ""
                   }`}
                 >
-                  <MinusIcon className="w-5 h-5 inline-block" />
+                  <MinusIcon className="w-4 h-4 inline-block" />
                 </button>
                 <p className="flex items-center justify-center">
                   {productQuantity(product.id)} added in cart
