@@ -24,10 +24,18 @@ export default function Product({ product }: { product: Product }) {
       <div className="relative top-6 left-1 flex justify-between">
         {/* badgee section */}
         <div>
-          <img src={DiscountBadge} alt="" className="absolute top-0 -left-2" />
-          <p className="absolute top-1 left-2 text-xs text-white">
-            ৳ {((price * discountPercentage) / 100).toFixed(2)}
-          </p>
+          {!!discountPercentage && (
+            <>
+              <img
+                src={DiscountBadge}
+                alt=""
+                className="absolute top-0 -left-2"
+              />
+              <p className="absolute top-1 left-2 text-xs text-white">
+                ৳ {((price * discountPercentage) / 100).toFixed(2)}
+              </p>
+            </>
+          )}
         </div>
         {/* heart icon section */}
         <button className="invisible group-hover:visible bg-transparent absolute -top-2 right-2 rounded-xl p-2">
